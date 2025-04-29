@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gabriel Righini - Projeto Pessoal</title>
+  <title>Portfólio - Gabriel Righini</title>
   <style>
     body {
       margin: 0;
@@ -62,11 +62,21 @@
       font-weight: bold;
       margin: 10px 0;
     }
-    .imagem-cv img {
+    .imagem-cv img, .galeria img {
       max-width: 100%;
       height: auto;
       border-radius: 10px;
       border: 2px solid #00ffff;
+      margin-bottom: 20px;
+    }
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .galeria img {
+      max-width: 45%;
     }
     .objetivo p {
       white-space: pre-wrap;
@@ -77,7 +87,7 @@
 </head>
 <body>
   <header>
-    <h1>Gabriel Righini - Projeto Pessoal</h1>
+    <h1>Portfólio - Gabriel Righini</h1>
   </header>
   <div class="container">
     
@@ -135,6 +145,13 @@ Vestir a identidade de profissional de tecnologia desde já, mudando minha postu
     <div class="section imagem-cv">
       <h2>📄 Meu Currículo</h2>
       <img src="curriculo.jpg" alt="Currículo">
+    </div>
+
+    <div class="section galeria">
+      <h2>📸 Imagens / Projetos</h2>
+      <img src="projeto1.jpg" alt="Projeto 1" />
+      <img src="projeto2.jpg" alt="Projeto 2" />
+      <!-- Adicione mais imagens conforme quiser -->
     </div>
   </div>
 
