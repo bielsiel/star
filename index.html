@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gabriel Righini - Projeto Pessoal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #121212;
+      color: #f1f1f1;
+      overflow-y: scroll;
+    }
+    header {
+      background-color: #1e1e1e;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #333;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      color: #00ffff;
+    }
+    .container {
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    .section h2 {
+      color: #00ffff;
+      border-bottom: 1px solid #444;
+      padding-bottom: 5px;
+    }
+    .perfil {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .perfil img {
+      width: 150px;
+      height: 150px;
+      border-radius: 10px;
+      object-fit: cover;
+      border: 3px solid #00ffff;
+    }
+    .perfil-info {
+      font-size: 1.2em;
+    }
+    .perfil-info strong {
+      font-size: 1.5em;
+      display: block;
+      margin-bottom: 5px;
+    }
+    #clock, #countdown {
+      font-size: 2em;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    .imagem-cv img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 2px solid #00ffff;
+    }
+    .objetivo p {
+      white-space: pre-wrap;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gabriel Righini - Projeto Pessoal</h1>
+  </header>
+  <div class="container">
+    
+    <div class="section perfil">
+      <img src="foto.jpg" alt="Sua foto" />
+      <div class="perfil-info">
+        <strong>Gabriel Righini</strong>
+        Idade: 18 anos <br><br>
+        Jovem em transição de carreira. Buscando paz, estrutura e liberdade por meio da tecnologia.
+        Comprometido com a própria evolução pessoal e profissional.
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Relógio</h2>
+      <div id="clock"></div>
+    </div>
+
+    <div class="section">
+      <h2>Contagem até 20 de maio</h2>
+      <div id="countdown"></div>
+    </div>
+
+    <div class="section objetivo">
+      <h2>💡 Objetivo</h2>
+      <p>
+💡 IDEIA REVOLUCIONÁRIA (VIÁVEL):
+Criar minha própria "mini carreira de tecnologia" em 60 dias, com foco total em:
+
+✅ 1 curso prático de TI remoto, com provas, certificados e projetos.  
+✅ 1 portfólio real (Notion, GitHub ou PDF) com prints e explicações dos projetos.  
+✅ Aplicar para 1 vaga por dia, mesmo que simples ou estágio remoto.
+
+Mas aqui está o pulo do gato:
+
+🧠 Fingir que já estou na área. Viver como se a mudança já aconteceu.  
+Vestir a identidade de profissional de tecnologia desde já, mudando minha postura, confiança e ações.
+
+🚀 O PLANO (de agora até sair da empresa):
+
+• Fazer um curso simples e prático de TI (Helpdesk, Suporte ou Analista Jr).  
+• Criar portfólio e currículo com ajuda externa ou com modelos prontos.  
+• Continuar no emprego atual só até quitar a dívida (meta: 20 de maio).  
+• Usar o trabalho como “financiamento forçado” da nova vida.  
+• Começar a aplicar para vagas já agora, enquanto ainda estou empregado.
+
+🎯 Por que isso pode funcionar?
+
+• Junta minha urgência com um objetivo concreto.  
+• Gera retorno em semanas, não anos.  
+• Transforma o sofrimento atual em alavanca para mudança.
+      </p>
+    </div>
+
+    <div class="section imagem-cv">
+      <h2>📄 Meu Currículo</h2>
+      <img src="curriculo.jpg" alt="Currículo">
+    </div>
+  </div>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      document.getElementById('clock').textContent = now.toLocaleTimeString('pt-BR');
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    function updateCountdown() {
+      const now = new Date();
+      const target = new Date('2025-05-20T00:00:00');
+      const diff = target - now;
+      if (diff <= 0) {
+        document.getElementById('countdown').textContent = 'Chegou o dia!';
+        return;
+      }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      document.getElementById('countdown').textContent =
+        `${days} dias, ${hours}h ${minutes}m ${seconds}s`;
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
+</html>
